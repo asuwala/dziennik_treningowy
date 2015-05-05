@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Projekt</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="ostatno_trening">Ostatni trening:</string>
+    <string name="dodaj_trening">Dodaj trening</string>
+    <string name="bmi">BMI: </string>
+    <string name="wzrost">Wzrost:</string>
+    <string name="waga">Waga:</string>
+    <string name="ob_klatka">Ob. klatki piersiowej:</string>
+    <string name="ob_talia">Ob. talii:</string>
+    <string name="ob_bioder">Ob. bioder:</string>
+    <string name="ob_uda">Ob. uda:</string>
+    <string name="historia">Historia</string>
+    <string name="aktualizuj_dane">Aktualizuj dane</string>
+    <string name="cm">cm</string>
+    <string name="kg">kg</string>
+    <string name="usun_historie">Usuń historie</string>
+    <string name="zapisz">Zapisz</string>
+    <string name="anuluj">Anuluj</string>
+    <string name="aktualizuj_wymiarow">Aktualizacja wymiarów użytkownika:</string>
+    <string name="historia_wymiarow">Historia wymiarów</string>
+    <string name="aktualne_wymary">Aktualne wymiary</string>
+    />
+</resources>

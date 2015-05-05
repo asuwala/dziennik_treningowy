@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/bmi"
+            android:id="@+id/tV_BMI"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="29dp"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="50dp"
+            android:gravity="right"
+            android:textAlignment="gravity"
+            android:layout_toLeftOf="@+id/tV_bmi_wartosc"
+            android:layout_toStartOf="@+id/tV_bmi_wartosc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/wzrost"
+            android:id="@+id/tV_Wzrost"
+            android:layout_below="@+id/tV_BMI"
+            android:layout_alignLeft="@+id/tV_BMI"
+            android:layout_alignStart="@+id/tV_BMI"
+            android:layout_marginTop="25dp"
+            android:gravity="right"
+            android:textAlignment="gravity"
+            android:layout_toLeftOf="@+id/tV_Wzrost_wartosc"
+            android:layout_toStartOf="@+id/tV_Wzrost_wartosc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/waga"
+            android:id="@+id/tV_Waga"
+            android:layout_below="@+id/tV_Wzrost"
+            android:layout_alignLeft="@+id/tV_Wzrost"
+            android:layout_alignStart="@+id/tV_Wzrost"
+            android:layout_marginTop="25dp"
+            android:gravity="right"
+            android:textAlignment="gravity"
+            android:layout_toLeftOf="@+id/tV_Waga_wartosc"
+            android:layout_toStartOf="@+id/tV_Waga_wartosc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/ob_klatka"
+            android:id="@+id/tV_Ob_klatka"
+            android:layout_below="@+id/tV_Waga"
+            android:layout_alignRight="@+id/tV_Waga"
+            android:layout_alignEnd="@+id/tV_Waga"
+            android:layout_marginTop="25dp"
+            android:gravity="right"
+            android:textAlignment="gravity"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/ob_talia"
+            android:id="@+id/tV_Ob_talia"
+            android:layout_below="@+id/tV_Ob_klatka"
+            android:layout_alignLeft="@+id/tV_Ob_klatka"
+            android:layout_alignStart="@+id/tV_Ob_klatka"
+            android:layout_marginTop="25dp"
+            android:gravity="right"
+            android:textAlignment="gravity"
+            android:layout_toLeftOf="@+id/tV_Talia_wartosc"
+            android:layout_toStartOf="@+id/tV_Talia_wartosc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/ob_bioder"
+            android:id="@+id/tV_Ob_bioder"
+            android:layout_below="@+id/tV_Ob_talia"
+            android:layout_marginTop="25dp"
+            android:gravity="right"
+            android:textAlignment="gravity"
+            android:layout_toLeftOf="@+id/tV_Biodra_wartosc"
+            android:layout_toStartOf="@+id/tV_Biodra_wartosc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/ob_uda"
+            android:id="@+id/tV_Ob_uda"
+            android:layout_below="@+id/tV_Ob_bioder"
+            android:layout_alignRight="@+id/tV_Ob_bioder"
+            android:layout_alignEnd="@+id/tV_Ob_bioder"
+            android:layout_marginTop="25dp"
+            android:gravity="right"
+            android:textAlignment="gravity"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/tV_bmi_wartosc"
+            android:layout_above="@+id/tV_Wzrost"
+            android:layout_centerHorizontal="true"
+            android:background="#fffffffb" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/tV_Wzrost_wartosc"
+            android:layout_alignTop="@+id/tV_Wzrost"
+            android:layout_alignLeft="@+id/tV_bmi_wartosc"
+            android:layout_alignStart="@+id/tV_bmi_wartosc"
+            android:background="#fffffffb" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/tV_Waga_wartosc"
+            android:layout_alignTop="@+id/tV_Waga"
+            android:layout_alignLeft="@+id/tV_Wzrost_wartosc"
+            android:layout_alignStart="@+id/tV_Wzrost_wartosc"
+            android:background="#fffffffb" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/tV_Klatka_wartosc"
+            android:layout_alignBottom="@+id/tV_Ob_klatka"
+            android:layout_toRightOf="@+id/tV_Ob_klatka"
+            android:layout_toEndOf="@+id/tV_Ob_klatka"
+            android:background="#fffffffb" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/tV_Talia_wartosc"
+            android:layout_alignTop="@+id/tV_Ob_talia"
+            android:layout_alignRight="@+id/tV_Klatka_wartosc"
+            android:layout_alignEnd="@+id/tV_Klatka_wartosc"
+            android:background="#fffffffb" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/tV_Biodra_wartosc"
+            android:layout_alignTop="@+id/tV_Ob_bioder"
+            android:layout_alignLeft="@+id/tV_Talia_wartosc"
+            android:layout_alignStart="@+id/tV_Talia_wartosc"
+            android:background="#fffffffb" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/tV_Uda_wartosc"
+            android:layout_alignTop="@+id/tV_Ob_uda"
+            android:layout_alignRight="@+id/tV_Biodra_wartosc"
+            android:layout_alignEnd="@+id/tV_Biodra_wartosc"
+            android:background="#fffffffb" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/historia"
+            android:id="@+id/btn_Anuluj_wymiary"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/tV_Uda_wartosc"
+            android:layout_toStartOf="@+id/tV_Uda_wartosc"
+            android:layout_marginBottom="50dp"
+            android:layout_marginLeft="50dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/aktualizuj_dane"
+            android:id="@+id/btn_Aktualizuj_wymiary"
+            android:layout_alignTop="@+id/btn_Anuluj_wymiary"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="50dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/cm"
+            android:id="@+id/textView2"
+            android:layout_alignTop="@+id/tV_Wzrost_wartosc"
+            android:layout_toRightOf="@+id/tV_Wzrost_wartosc"
+            android:layout_toEndOf="@+id/tV_Wzrost_wartosc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/kg"
+            android:id="@+id/textView3"
+            android:layout_alignTop="@+id/tV_Waga_wartosc"
+            android:layout_toRightOf="@+id/tV_Waga_wartosc"
+            android:layout_toEndOf="@+id/tV_Waga_wartosc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/cm"
+            android:id="@+id/textView4"
+            android:layout_alignTop="@+id/tV_Klatka_wartosc"
+            android:layout_toRightOf="@+id/tV_Klatka_wartosc"
+            android:layout_toEndOf="@+id/tV_Klatka_wartosc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/cm"
+            android:id="@+id/textView5"
+            android:layout_alignTop="@+id/tV_Talia_wartosc"
+            android:layout_toRightOf="@+id/tV_Talia_wartosc"
+            android:layout_toEndOf="@+id/tV_Talia_wartosc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/cm"
+            android:id="@+id/textView6"
+            android:layout_alignBottom="@+id/tV_Biodra_wartosc"
+            android:layout_toRightOf="@+id/tV_Biodra_wartosc"
+            android:layout_toEndOf="@+id/tV_Biodra_wartosc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/cm"
+            android:id="@+id/textView7"
+            android:layout_alignBottom="@+id/tV_Uda_wartosc"
+            android:layout_toRightOf="@+id/tV_Uda_wartosc"
+            android:layout_toEndOf="@+id/tV_Uda_wartosc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/aktualne_wymary"
+            android:id="@+id/textView10"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" />
+    </RelativeLayout>
+</LinearLayout>

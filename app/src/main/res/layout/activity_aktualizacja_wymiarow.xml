@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/anuluj"
+            android:id="@+id/btn_Anuluj_wymiary"
+            android:layout_marginBottom="54dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/btn_Zapisz_wymiary"
+            android:layout_toStartOf="@+id/btn_Zapisz_wymiary"
+            android:layout_marginRight="72dp"
+            android:layout_marginEnd="72dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zapisz"
+            android:id="@+id/btn_Zapisz_wymiary"
+            android:layout_marginRight="69dp"
+            android:layout_marginEnd="69dp"
+            android:layout_alignTop="@+id/btn_Anuluj_wymiary"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/wzrost"
+            android:id="@+id/tv_wzrost"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/tv_waga"
+            android:layout_alignEnd="@+id/tv_waga"
+            android:layout_marginTop="60dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/waga"
+            android:id="@+id/tv_waga"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/tv_wzrost"
+            android:layout_alignRight="@+id/tv_ob_klatka"
+            android:layout_alignEnd="@+id/tv_ob_klatka" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/ob_klatka"
+            android:id="@+id/tv_ob_klatka"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/tv_waga"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/ob_talia"
+            android:id="@+id/tv_ob_talia"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/tv_ob_klatka"
+            android:layout_alignRight="@+id/tv_ob_klatka"
+            android:layout_alignEnd="@+id/tv_ob_klatka" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/ob_bioder"
+            android:id="@+id/tv_ob_biodra"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/tv_ob_talia"
+            android:layout_alignRight="@+id/tv_ob_talia"
+            android:layout_alignEnd="@+id/tv_ob_talia" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/ob_uda"
+            android:id="@+id/tv_ob_uda"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/tv_ob_biodra"
+            android:layout_alignRight="@+id/tv_ob_biodra"
+            android:layout_alignEnd="@+id/tv_ob_biodra" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/et_wzrost"
+            android:layout_alignTop="@+id/tv_wzrost"
+            android:layout_toRightOf="@+id/tv_wzrost"
+            android:layout_toEndOf="@+id/tv_wzrost" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/et_waga"
+            android:layout_alignTop="@+id/tv_waga"
+            android:layout_toRightOf="@+id/tv_waga"
+            android:layout_toEndOf="@+id/tv_waga" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/et_klatka"
+            android:layout_alignTop="@+id/tv_ob_klatka"
+            android:layout_toRightOf="@+id/tv_ob_klatka"
+            android:layout_toEndOf="@+id/tv_ob_klatka" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/et_talia"
+            android:layout_alignTop="@+id/tv_ob_talia"
+            android:layout_toRightOf="@+id/tv_ob_talia"
+            android:layout_toEndOf="@+id/tv_ob_talia" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/et_biodra"
+            android:layout_alignTop="@+id/tv_ob_biodra"
+            android:layout_toRightOf="@+id/tv_ob_biodra"
+            android:layout_toEndOf="@+id/tv_ob_biodra" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/et_uda"
+            android:layout_alignTop="@+id/tv_ob_uda"
+            android:layout_toRightOf="@+id/tv_ob_uda"
+            android:layout_toEndOf="@+id/tv_ob_uda" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/aktualizuj_wymiarow"
+            android:id="@+id/textView8"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>
