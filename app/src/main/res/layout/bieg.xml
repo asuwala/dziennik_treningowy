@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".Home">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Dodawanie Treningu: Bieg"
+            android:id="@+id/dodTrening"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:singleLine="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Dystans"
+            android:id="@+id/textView4"
+            android:layout_below="@+id/dodTrening"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="56dp"
+            android:textColor="#ff000000"
+            android:textSize="20dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/dystansBieg"
+            android:layout_alignBottom="@+id/textView4"
+            android:layout_alignRight="@+id/dodTrening" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Kategoria"
+            android:id="@+id/textView5"
+            android:textColor="#ff000000"
+            android:textSize="20dp"
+            android:layout_alignBottom="@+id/kategoriaBieg"
+            android:layout_alignParentLeft="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/kategoriaBieg"
+            android:layout_below="@+id/dystansBieg"
+            android:layout_alignLeft="@+id/dystansBieg"
+            android:layout_marginTop="51dp"
+            android:layout_alignRight="@+id/dystansBieg" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Notatka"
+            android:id="@+id/textView6"
+            android:textColor="#ff000000"
+            android:textSize="20dp"
+            android:layout_marginTop="68dp"
+            android:layout_below="@+id/kategoriaBieg"
+            android:layout_alignParentLeft="true" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/editText3"
+            android:height="50dp"
+            android:background="#aadbff33"
+            android:layout_below="@+id/textView6"
+            android:layout_alignParentLeft="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zapisz"
+            android:id="@+id/ZapiszBieg"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Anuluj"
+            android:id="@+id/AnulujBieg"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/kategoriaBieg" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>
