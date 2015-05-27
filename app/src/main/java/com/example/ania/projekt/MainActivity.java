@@ -1,17 +1,29 @@
 package com.example.ania.projekt;
 
-import android.support.v7.app.ActionBarActivity;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.io.File;
 
-public class MainActivity extends ActionBarActivity {
+
+public class MainActivity extends FragmentActivity {
+
+    ViewPager viewPager = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        viewPager = (ViewPager) findViewById(R.id.pager);
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        viewPager.setAdapter( new MyAdapter(fragmentManager));
     }
 
 
@@ -35,5 +47,54 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+}
+
+class MyAdapter extends FragmentPagerAdapter {
+
+
+    public MyAdapter(FragmentManager fm) {
+        super(fm);
+    }
+
+    @Override
+    public Fragment getItem(int i) {
+        Fragment fragment=null;
+        if(i==0)
+        {
+            fragment = new Glowna();
+        }
+        if(i==1)
+        {
+            fragment = new Uzytkownik();
+        }
+        if(i==2)
+        {
+            fragment = new Historia();
+        }
+        return fragment;
+    }
+
+    @Override
+    public int getCount() {
+        return 3;
+    }
+
+    @Override
+    public CharSequence getPageTitle(int position){
+
+        if(position==0)
+        {
+            return "Home";
+        }
+        if(position==1)
+        {
+            return "User";
+        }
+        if(position==2)
+        {
+            return "History";
+        }
+        return null;
     }
 }

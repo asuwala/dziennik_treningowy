@@ -22,5 +22,9 @@
     <string name="aktualizuj_wymiarow">Aktualizacja wymiarów użytkownika:</string>
     <string name="historia_wymiarow">Historia wymiarów</string>
     <string name="aktualne_wymary">Aktualne wymiary</string>
+    <string name="uzytkownik">Użytkownik</string>
+    <string name="title_section1">Główna</string>
+    <string name="title_section2">Użytkownik</string>
+    <string name="title_section3">Historia</string>
     />
 </resources>

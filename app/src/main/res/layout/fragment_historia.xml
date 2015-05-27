@@ -16,15 +16,14 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginRight="25dp"
-            android:layout_marginEnd="25dp"
-            android:layout_marginBottom="19dp" />
+            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Medium Text"
             android:id="@+id/tV_Historia_trenngow"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
