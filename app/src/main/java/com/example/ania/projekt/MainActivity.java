@@ -1,5 +1,6 @@
 package com.example.ania.projekt;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
@@ -8,11 +9,23 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
-
-import java.io.File;
+import android.view.View;
+import android.widget.Button;
 
 
 public class MainActivity extends FragmentActivity {
+
+
+    public void aktyalizuj(View view) {
+        Intent addIntent = new Intent(getApplicationContext(), AktualizacjaWymiarowActivity.class);
+        startActivity(addIntent);
+    }
+
+    public void historiawymiarow (View view) {
+        Intent addIntent = new Intent(getApplicationContext(), HistoriaWymiarow.class);
+        startActivity(addIntent);
+    }
+
 
     ViewPager viewPager = null;
 
@@ -24,6 +37,22 @@ public class MainActivity extends FragmentActivity {
         viewPager = (ViewPager) findViewById(R.id.pager);
         FragmentManager fragmentManager = getSupportFragmentManager();
         viewPager.setAdapter( new MyAdapter(fragmentManager));
+
+        /*
+        Button cliButton = (Button) findViewById(R.id.btn_Aktualizuj_wymiary);
+        cliButton.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent addIntent = new Intent(getApplicationContext(), AktualizacjaWymiarowActivity.class);
+                startActivity(addIntent);
+            }
+        });
+        */
+
+
+
+
     }
 
 
@@ -98,3 +127,4 @@ class MyAdapter extends FragmentPagerAdapter {
         return null;
     }
 }
+

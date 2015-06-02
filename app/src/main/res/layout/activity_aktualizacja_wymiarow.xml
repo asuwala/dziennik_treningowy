@@ -10,36 +10,13 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/anuluj"
-            android:id="@+id/btn_Anuluj_wymiary"
-            android:layout_marginBottom="54dp"
-            android:layout_alignParentBottom="true"
-            android:layout_toLeftOf="@+id/btn_Zapisz_wymiary"
-            android:layout_toStartOf="@+id/btn_Zapisz_wymiary"
-            android:layout_marginRight="72dp"
-            android:layout_marginEnd="72dp" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="@string/zapisz"
             android:id="@+id/btn_Zapisz_wymiary"
-            android:layout_marginRight="69dp"
-            android:layout_marginEnd="69dp"
-            android:layout_alignTop="@+id/btn_Anuluj_wymiary"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/wzrost"
-            android:id="@+id/tv_wzrost"
-            android:layout_alignParentTop="true"
-            android:layout_alignRight="@+id/tv_waga"
-            android:layout_alignEnd="@+id/tv_waga"
-            android:layout_marginTop="60dp" />
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/et_uda"
+            android:layout_alignEnd="@+id/et_uda" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -47,10 +24,10 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/waga"
             android:id="@+id/tv_waga"
-            android:layout_marginTop="30dp"
-            android:layout_below="@+id/tv_wzrost"
-            android:layout_alignRight="@+id/tv_ob_klatka"
-            android:layout_alignEnd="@+id/tv_ob_klatka" />
+            android:layout_marginTop="49dp"
+            android:layout_below="@+id/textView8"
+            android:layout_toLeftOf="@+id/et_klatka"
+            android:layout_toStartOf="@+id/et_klatka" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -95,16 +72,6 @@
             android:layout_below="@+id/tv_ob_biodra"
             android:layout_alignRight="@+id/tv_ob_biodra"
             android:layout_alignEnd="@+id/tv_ob_biodra" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:ems="10"
-            android:id="@+id/et_wzrost"
-            android:layout_alignTop="@+id/tv_wzrost"
-            android:layout_toRightOf="@+id/tv_wzrost"
-            android:layout_toEndOf="@+id/tv_wzrost" />
 
         <EditText
             android:layout_width="wrap_content"

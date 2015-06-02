@@ -16,6 +16,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+           android:name=".AktualizacjaWymiarowActivity"
+            android:label="@string/aktualizuj_wymiarow"/>
+        <activity
+            android:name=".HistoriaWymiarow"
+            android:label="@string/historia_wymiarow" />
+
+
+
     </application>
 
 </manifest>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Projekt</string>
+    <string name="app_name">Dziennik treningowy</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
@@ -19,9 +19,9 @@
     <string name="usun_historie">Usuń historie</string>
     <string name="zapisz">Zapisz</string>
     <string name="anuluj">Anuluj</string>
-    <string name="aktualizuj_wymiarow">Aktualizacja wymiarów użytkownika:</string>
-    <string name="historia_wymiarow">Historia wymiarów</string>
-    <string name="aktualne_wymary">Aktualne wymiary</string>
+    <string name="aktualizuj_wymiarow">Nowe wymiary użytkownika:</string>
+    <string name="historia_wymiarow">Historia wymiarów:</string>
+    <string name="aktualne_wymary">Aktualne wymiary:</string>
     <string name="uzytkownik">Użytkownik</string>
     <string name="title_section1">Główna</string>
     <string name="title_section2">Użytkownik</string>
