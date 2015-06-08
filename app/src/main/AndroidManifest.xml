@@ -22,7 +22,18 @@
         <activity
             android:name=".HistoriaWymiarow"
             android:label="@string/historia_wymiarow" />
-
+        <activity android:name=".Plywanie"
+            android:label="@string/app_name"
+            ></activity>
+        <activity android:name=".Bieg"
+            android:label="@string/app_name"
+            ></activity>
+        <activity android:name=".Fitness"
+            android:label="@string/app_name"
+            ></activity>
+        <activity android:name=".rodzaj_Treningu"
+            android:label="@string/app_name"
+            ></activity>
 
 
     </application>

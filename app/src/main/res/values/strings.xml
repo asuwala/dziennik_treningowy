@@ -26,5 +26,11 @@
     <string name="title_section1">Główna</string>
     <string name="title_section2">Użytkownik</string>
     <string name="title_section3">Historia</string>
+    <string name="rodzajSport">Rodzaj sportu</string>
+    <string-array name="sports">
+        <item>Plywanie</item>
+        <item>Bieg</item>
+        <item>Fitness</item>
+    </string-array>
     />
 </resources>

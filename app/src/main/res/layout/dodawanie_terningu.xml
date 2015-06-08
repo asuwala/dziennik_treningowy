@@ -27,13 +27,16 @@
             android:layout_height="wrap_content"
             android:drawSelectorOnTop="true"
             android:id="@+id/rodzajTrening"
-
-            android:layout_marginTop="41dp"
-            android:clickable="false"
+            android:entries="@array/sports"
+            android:prompt="@string/rodzajSport"
+            android:layout_marginTop="42dp"
+            android:clickable="true"
 
             android:layout_below="@+id/dodTrening"
-            android:layout_alignLeft="@+id/editText2"
-            android:layout_alignStart="@+id/editText2" />
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/textView"
+            android:layout_toEndOf="@+id/textView" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -59,7 +62,10 @@
             android:id="@+id/Data"
             android:layout_below="@+id/rodzajTrening"
             android:layout_toRightOf="@+id/textView"
-            android:layout_toEndOf="@+id/textView" />
+            android:layout_toEndOf="@+id/textView"
+            android:editable="true"
+            android:enabled="true"
+            android:hint="DD/MM/YYYY" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -115,12 +121,14 @@
             android:id="@+id/Zapisz"
             android:layout_alignParentBottom="true"
             android:layout_alignRight="@+id/editText"
-            android:layout_alignEnd="@+id/editText" />
+            android:layout_alignEnd="@+id/editText"
+            android:clickable="true" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Szczegóły"
+            android:clickable="true"
             android:id="@+id/szczegoly"
             android:layout_above="@+id/Zapisz"
             android:layout_alignRight="@+id/Zapisz"
@@ -135,17 +143,8 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/szczegoly" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:ems="10"
-            android:id="@+id/editText2"
-            android:layout_alignTop="@+id/rodzajTrening"
-            android:layout_toRightOf="@+id/textView"
-            android:layout_toEndOf="@+id/textView" />
+            android:layout_below="@+id/szczegoly"
+            android:clickable="true" />
 
     </RelativeLayout>
 
