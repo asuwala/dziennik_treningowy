@@ -41,7 +41,9 @@
             android:ems="10"
             android:id="@+id/dystansBieg"
             android:layout_alignBottom="@+id/textView4"
-            android:layout_alignRight="@+id/dodTrening" />
+            android:layout_alignRight="@+id/dodTrening"
+            android:text="0"
+            android:autoText="false" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -61,7 +63,9 @@
             android:layout_below="@+id/dystansBieg"
             android:layout_alignLeft="@+id/dystansBieg"
             android:layout_marginTop="51dp"
-            android:layout_alignRight="@+id/dystansBieg" />
+            android:layout_alignRight="@+id/dystansBieg"
+            android:accessibilityLiveRegion="assertive"
+            android:autoText="true" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -80,7 +84,7 @@
             android:layout_height="wrap_content"
             android:inputType="textMultiLine"
             android:ems="10"
-            android:id="@+id/editText3"
+            android:id="@+id/notatkaBieg"
             android:height="50dp"
             android:background="#aadbff33"
             android:layout_below="@+id/textView6"

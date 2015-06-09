@@ -72,7 +72,7 @@
             android:layout_height="wrap_content"
             android:inputType="time"
             android:ems="10"
-            android:id="@+id/editText"
+            android:id="@+id/Czas"
             android:layout_centerVertical="true"
             android:layout_alignLeft="@+id/Data"
             android:layout_alignStart="@+id/Data" />
@@ -90,8 +90,8 @@
             android:lines="2"
             android:textStyle="bold"
             android:textAlignment="gravity"
-            android:layout_alignBottom="@+id/editText"
-            android:layout_toLeftOf="@+id/editText"
+            android:layout_alignBottom="@+id/Czas"
+            android:layout_toLeftOf="@+id/Czas"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
 
@@ -120,8 +120,8 @@
             android:text="Zapisz"
             android:id="@+id/Zapisz"
             android:layout_alignParentBottom="true"
-            android:layout_alignRight="@+id/editText"
-            android:layout_alignEnd="@+id/editText"
+            android:layout_alignRight="@+id/Czas"
+            android:layout_alignEnd="@+id/Czas"
             android:clickable="true" />
 
         <Button
