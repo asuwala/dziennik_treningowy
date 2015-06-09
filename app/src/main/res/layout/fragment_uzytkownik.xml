@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="1">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -133,25 +131,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/historia"
-            android:id="@+id/btn_Anuluj_wymiary"
+            android:id="@+id/btn_Historia_wymiary"
             android:layout_alignParentBottom="true"
             android:layout_toLeftOf="@+id/tV_Uda_wartosc"
             android:layout_toStartOf="@+id/tV_Uda_wartosc"
             android:layout_marginBottom="20dp"
-            android:layout_marginLeft="20dp"
-            android:onClick="historiawymiarow"/>
+            android:layout_marginLeft="20dp" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/aktualizuj_dane"
             android:id="@+id/btn_Aktualizuj_wymiary"
-            android:layout_alignTop="@+id/btn_Anuluj_wymiary"
+            android:layout_alignTop="@+id/btn_Historia_wymiary"
+            android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:layout_marginRight="20dp"
-            android:layout_marginBottom="20dp"
-            android:onClick="aktyalizuj"/>
+            android:layout_marginBottom="20dp"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -212,5 +209,4 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp" />
-    </RelativeLayout>
-</LinearLayout>
+</RelativeLayout>

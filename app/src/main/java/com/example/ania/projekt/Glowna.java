@@ -14,9 +14,10 @@ import android.widget.Button;
  */
 public class Glowna extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View w= inflater.inflate(R.layout.fragment_glowna, container,false);
+        View w = inflater.inflate(R.layout.fragment_glowna, container,false);
         Button btn1 = (Button) w
                 .findViewById(R.id.buttonDodajTrening);
+
 
         btn1.setOnClickListener(new View.OnClickListener() {
 
@@ -27,7 +28,11 @@ public class Glowna extends Fragment {
                 ((MainActivity) getActivity()).startActivity(intent);
 
             }
+
+
         });
+
+
 
 
         return w;

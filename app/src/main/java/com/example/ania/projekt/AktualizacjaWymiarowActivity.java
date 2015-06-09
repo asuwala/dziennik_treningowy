@@ -16,6 +16,7 @@ import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 /**
  * Created by Ania on 2015-06-02.
@@ -29,9 +30,26 @@ public class AktualizacjaWymiarowActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aktualizacja_wymiarow);
 
-
         Button cliButton = (Button) findViewById(R.id.btn_Zapisz_wymiary);
-        /*
+
+
+
+        cliButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                EditText waga = (EditText)AktualizacjaWymiarowActivity.this.findViewById(R.id.et_waga);
+                EditText obklatka = (EditText)AktualizacjaWymiarowActivity.this.findViewById(R.id.et_klatka);
+                EditText obtalia = (EditText)AktualizacjaWymiarowActivity.this.findViewById(R.id.et_talia);
+                EditText obbiodra = (EditText)AktualizacjaWymiarowActivity.this.findViewById(R.id.et_biodra);
+                EditText obuda = (EditText)AktualizacjaWymiarowActivity.this.findViewById(R.id.et_uda);
+                String napis = waga.getText().toString();
+                //Toast.makeText(getApplicationContext(), "Zapisano wymiary", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),napis,Toast.LENGTH_LONG).show();
+            }
+        });
+
+/*
         cliButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,17 +67,19 @@ public class AktualizacjaWymiarowActivity extends Activity {
 
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        EditText wzrost = (EditText)AktualizacjaWymiarow.this.findViewById(R.id.et_wzrost);
-                        EditText waga = (EditText)AktualizacjaWymiarow.this.findViewById(R.id.et_waga);
-                        EditText obklatka = (EditText)AktualizacjaWymiarow.this.findViewById(R.id.et_klatka);
-                        EditText obtalia = (EditText)AktualizacjaWymiarow.this.findViewById(R.id.et_talia);
-                        EditText obbiodra = (EditText)AktualizacjaWymiarow.this.findViewById(R.id.et_biodra);
-                        EditText obuda = (EditText)AktualizacjaWymiarow.this.findViewById(R.id.et_uda);
+
+                        EditText waga = (EditText)AktualizacjaWymiarowActivity.this.findViewById(R.id.et_waga);
+                        EditText obklatka = (EditText)AktualizacjaWymiarowActivity.this.findViewById(R.id.et_klatka);
+                        EditText obtalia = (EditText)AktualizacjaWymiarowActivity.this.findViewById(R.id.et_talia);
+                        EditText obbiodra = (EditText)AktualizacjaWymiarowActivity.this.findViewById(R.id.et_biodra);
+                        EditText obuda = (EditText)AktualizacjaWymiarowActivity.this.findViewById(R.id.et_uda);
                     }
                 });
             }
         });
 
-*/
+        */
+
+
     }
 }
