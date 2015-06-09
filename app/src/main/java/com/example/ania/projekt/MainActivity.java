@@ -15,17 +15,6 @@ import android.view.View;
 public class MainActivity extends FragmentActivity {
 
 
-    public void aktyalizuj(View view) {
-        Intent addIntent = new Intent(getApplicationContext(), AktualizacjaWymiarowActivity.class);
-        startActivity(addIntent);
-    }
-
-    public void historiawymiarow (View view) {
-        Intent addIntent = new Intent(getApplicationContext(), HistoriaWymiarow.class);
-        startActivity(addIntent);
-    }
-
-
     ViewPager viewPager = null;
 
 
@@ -36,22 +25,6 @@ public class MainActivity extends FragmentActivity {
         viewPager = (ViewPager) findViewById(R.id.pager);
         FragmentManager fragmentManager = getSupportFragmentManager();
         viewPager.setAdapter( new MyAdapter(fragmentManager));
-
-
-        /*
-        Button cliButton = (Button) findViewById(R.id.btn_Aktualizuj_wymiary);
-        cliButton.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-                Intent addIntent = new Intent(getApplicationContext(), AktualizacjaWymiarowActivity.class);
-                startActivity(addIntent);
-            }
-        });
-        */
-
-
-
 
     }
 
