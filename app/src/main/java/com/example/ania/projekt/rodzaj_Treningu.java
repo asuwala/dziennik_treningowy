@@ -16,11 +16,46 @@ public class rodzaj_Treningu extends Activity {
     ZarzadcaBazy zb;
     public Intent i;
     String aktywnosc;
+   // walidacjaDanych walidacja;
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
 
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dodawanie_terningu);
+        final EditText dataE=(EditText)findViewById(R.id.Data);
+        final EditText czasE=(EditText)findViewById(R.id.Czas);
+
+        dataE.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (!hasFocus) {
+                    // code to execute when EditText loses focus
+                    boolean e=walidacjaDanych.walidacjaDaty(dataE.getText().toString());
+                    if(!e)
+                    {
+                        dataE.setText("");
+                    }
+
+                }
+            }
+        });
+        czasE.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (!hasFocus) {
+                    // code to execute when EditText loses focus
+                    boolean e=walidacjaDanych.walidacjaCzasu(czasE.getText().toString());
+                    if(!e)
+                    {
+                        czasE.setText("");
+                    }
+
+                }
+            }
+        });
+
+
         zb=new ZarzadcaBazy(this);
 
         Button b1;
@@ -31,49 +66,55 @@ public class rodzaj_Treningu extends Activity {
                 startActivity(i);
             }
         });
-        b1=(Button)findViewById(R.id.szczegoly);
-        b1.setOnClickListener(new View.OnClickListener() {
-                                  public void onClick(View v) {
-                                      final EditText czas=(EditText)findViewById(R.id.Czas);
-                                      final EditText data=(EditText)findViewById(R.id.Data);
+            b1=(Button)
 
-                                      String kat=((Spinner)findViewById(R.id.rodzajTrening)).getSelectedItem().toString();
-                                      if(kat.equals("Fitness")==true) {
-                                          i = new Intent(getApplicationContext(), Fitness.class);
-                                          aktywnosc="fitness";
+            findViewById(R.id.szczegoly);
+
+            b1.setOnClickListener(new View.OnClickListener()
+
+                                  {
+                                      public void onClick(View v) {
+                                          final EditText czas = (EditText) findViewById(R.id.Czas);
+                                          final EditText data = (EditText) findViewById(R.id.Data);
+
+                                          String kat = ((Spinner) findViewById(R.id.rodzajTrening)).getSelectedItem().toString();
+                                          if (kat.equals("Fitness") == true) {
+                                              i = new Intent(getApplicationContext(), Fitness.class);
+                                              aktywnosc = "fitness";
+                                          }
+                                          if (kat.equals("Bieg") == true) {
+                                              i = new Intent(getApplicationContext(), Bieg.class);
+
+                                          }
+                                          if (kat.equals("Plywanie") == true) {
+                                              i = new Intent(getApplicationContext(), Plywanie.class);
+
+
+                                          }
+                                          i.putExtra("czas", czas.getText().toString());
+                                          i.putExtra("data", data.getText().toString());
+                                          startActivity(i);
                                       }
-                                      if (kat.equals("Bieg")==true){
-                                          i = new Intent(getApplicationContext(), Bieg.class);
-
-                                      }
-                                      if (kat.equals("Plywanie")==true) {
-                                          i = new Intent(getApplicationContext(), Plywanie.class);
-
-
-
-                                      }
-                                      i.putExtra("czas", czas.getText().toString());
-                                      i.putExtra("data", data.getText().toString());
-                                      startActivity(i);
                                   }
-                              }
-        );
+            );
 
-        Button b3=(Button)findViewById(R.id.Zapisz);
-        b3.setOnClickListener(new View.OnClickListener() {
-                                  public void onClick(View v) {
-                                      final EditText czas=(EditText)findViewById(R.id.Czas);
-                                      final EditText data=(EditText)findViewById(R.id.Data);
-                                      String czasT=czas.getText().toString();
-                                      String dataT=data.getText().toString();
+        Button b3 = (Button) findViewById(R.id.Zapisz);
+            b3.setOnClickListener(new View.OnClickListener()
 
-                                      String kat=((Spinner)findViewById(R.id.rodzajTrening)).getSelectedItem().toString();
-                                      zb.dodajTrening(dataT, czasT, kat,
-                                              0, "", "", "");
-                                      Toast.makeText(getApplicationContext(), "zapisano nowy rekord do bazy", Toast.LENGTH_LONG).show();
+                                  {
+                                      public void onClick(View v) {
+                                          final EditText czas = (EditText) findViewById(R.id.Czas);
+                                          final EditText data = (EditText) findViewById(R.id.Data);
+                                          String czasT = czas.getText().toString();
+                                          String dataT = data.getText().toString();
+
+                                          String kat = ((Spinner) findViewById(R.id.rodzajTrening)).getSelectedItem().toString();
+                                          zb.dodajTrening(dataT, czasT, kat,
+                                                  0, "", "", "");
+                                          Toast.makeText(getApplicationContext(), "zapisano nowy rekord do bazy", Toast.LENGTH_LONG).show();
+                                      }
                                   }
-                              }
-        );
+            );
 
     }
 }

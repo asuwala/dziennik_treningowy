@@ -65,7 +65,7 @@
             android:layout_toEndOf="@+id/textView"
             android:editable="true"
             android:enabled="true"
-            android:hint="DD/MM/YYYY" />
+            android:hint="DD-MM-YYYY" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -75,7 +75,8 @@
             android:id="@+id/Czas"
             android:layout_centerVertical="true"
             android:layout_alignLeft="@+id/Data"
-            android:layout_alignStart="@+id/Data" />
+            android:layout_alignStart="@+id/Data"
+            android:hint="GG:MM:SS" />
 
         <TextView
             android:layout_width="wrap_content"
