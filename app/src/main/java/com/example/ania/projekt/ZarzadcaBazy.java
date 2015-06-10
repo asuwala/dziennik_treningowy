@@ -20,7 +20,7 @@ public class ZarzadcaBazy extends SQLiteOpenHelper {
         db.execSQL("create table wymiary(" + "id integer primary key autoincrement, " + "dataZapisu datetime, " +
                 "wzrost double, " + "waga double, " + "obKlatki double, " + "obTalii double, " + "obBioder double, " + "obUda double);" + "");
         db.execSQL("create table trening(" + "id integer primary key autoincrement, " + "czasTreningu time, " + "rodzajTreningu string, " + "dystans double, "
-                + "kategoria string, " + "notatka string, " + "styl string, " + "data datetime);"+"");
+                + "kategoria string, " + "notatka string, " + "styl string, " + "data datetime);" + "");
 
     }
 
@@ -75,5 +75,9 @@ public class ZarzadcaBazy extends SQLiteOpenHelper {
 
 
 
+    }
+    public void usunTrening(){
+        SQLiteDatabase db = getWritableDatabase();
+        db.delete("trening",null, null);
     }
 }
