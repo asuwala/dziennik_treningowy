@@ -103,15 +103,28 @@ public class rodzaj_Treningu extends Activity {
 
                                   {
                                       public void onClick(View v) {
+                                          try {
                                           final EditText czas = (EditText) findViewById(R.id.Czas);
                                           final EditText data = (EditText) findViewById(R.id.Data);
                                           String czasT = czas.getText().toString();
                                           String dataT = data.getText().toString();
+                                              if( czasE.length()==0 || dataT.length()==0)
+                                              {
+
+                                                  throw new Exception("puste dane");
+                                              }
 
                                           String kat = ((Spinner) findViewById(R.id.rodzajTrening)).getSelectedItem().toString();
-                                          zb.dodajTrening(dataT, czasT, kat,
-                                                  0, "", "", "");
-                                          Toast.makeText(getApplicationContext(), "zapisano nowy rekord do bazy", Toast.LENGTH_LONG).show();
+
+                                              zb.dodajTrening(dataT, czasT, kat,
+                                                      0, "", "", "");
+                                              Toast.makeText(getApplicationContext(), "zapisano nowy rekord do bazy", Toast.LENGTH_LONG).show();
+                                          }
+                                          catch (Exception e)
+                                          {
+                                              Toast.makeText(getApplicationContext(), "Blad podczas zapisu. Sprawdz, czy wpisales date i czas treningu", Toast.LENGTH_LONG).show();
+                                          }
+
                                       }
                                   }
             );

@@ -2,6 +2,7 @@ package com.example.ania.projekt;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -17,9 +18,9 @@ public class ZarzadcaBazy extends SQLiteOpenHelper {
     }
     @Override
     public void onCreate(SQLiteDatabase db){
-        db.execSQL("create table wymiary(" + "id integer primary key autoincrement, " + "dataZapisu datetime, " +
+        db.execSQL("create table wymiary(" + "id integer primary key autoincrement, " + "dataZapisu datetime not null, " +
                 "wzrost double, " + "waga double, " + "obKlatki double, " + "obTalii double, " + "obBioder double, " + "obUda double);" + "");
-        db.execSQL("create table trening(" + "id integer primary key autoincrement, " + "czasTreningu time, " + "rodzajTreningu string, " + "dystans double, "
+        db.execSQL("create table trening(" + "id integer primary key autoincrement, " + "czasTreningu time not null, " + "rodzajTreningu string not null, " + "dystans double, "
                 + "kategoria string, " + "notatka string, " + "styl string, " + "data datetime);" + "");
 
     }
@@ -35,11 +36,10 @@ public class ZarzadcaBazy extends SQLiteOpenHelper {
     };
     //metoda zapisuje wymiar uzytkownika wraz z aktualna data zapisu
     public void dodajWymiar(double wzrost, double waga, double obKlatki,double obTalii,
-                            double obBioder, double obUda)
-    {
+                            double obBioder, double obUda) throws Exception {
         try {
-            SQLiteDatabase db = getWritableDatabase();
 
+            SQLiteDatabase db = getWritableDatabase();
             ContentValues wartosc = new ContentValues();
             //pobietanie aktualnej daty
             Calendar c = Calendar.getInstance();
@@ -55,29 +55,44 @@ public class ZarzadcaBazy extends SQLiteOpenHelper {
             db.insertOrThrow("wymiary", null, wartosc);
             db.close();
         }
-        catch (Exception e)
+        catch (SQLException ex)
         {
+          System.out.print(ex.getMessage());
         }
     }
     // dodawanie treningu
     public void dodajTrening(String data, String czas, String rodzajTreningu,
                              double Dystans, String Kategoria, String notatka, String Styl){
-        SQLiteDatabase db = getWritableDatabase();
-        ContentValues wartosc = new ContentValues();
-        wartosc.put("data", data);
-        wartosc.put("czasTreningu", czas);
-        wartosc.put("rodzajTreningu", rodzajTreningu);
-        wartosc.put("dystans", Dystans);
-        wartosc.put("kategoria", Kategoria);
-        wartosc.put("styl", Styl);
-        wartosc.put("notatka",notatka);
-        db.insertOrThrow("trening", null, wartosc);
+        try {
+            SQLiteDatabase db = getWritableDatabase();
+            ContentValues wartosc = new ContentValues();
+            wartosc.put("data", data);
+            wartosc.put("czasTreningu", czas);
+            wartosc.put("rodzajTreningu", rodzajTreningu);
+            wartosc.put("dystans", Dystans);
+            wartosc.put("kategoria", Kategoria);
+            wartosc.put("styl", Styl);
+            wartosc.put("notatka", notatka);
+            db.insertOrThrow("trening", null, wartosc);
+            db.close();
 
 
+        }
+        catch (SQLException ex)
+        {
+            System.out.print(ex.getMessage());
+        }
 
     }
     public void usunTrening(){
-        SQLiteDatabase db = getWritableDatabase();
-        db.delete("trening",null, null);
+        try {
+            SQLiteDatabase db = getWritableDatabase();
+            db.delete("trening", null, null);
+            db.close();
+        }
+        catch (SQLException ex)
+        {
+            System.out.print(ex.getMessage());
+        }
     }
 }

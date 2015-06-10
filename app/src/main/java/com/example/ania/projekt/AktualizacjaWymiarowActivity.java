@@ -33,19 +33,41 @@ public class AktualizacjaWymiarowActivity extends Activity {
                 EditText e3= (EditText)AktualizacjaWymiarowActivity.this.findViewById(R.id.et_talia);
                 EditText e4 = (EditText)AktualizacjaWymiarowActivity.this.findViewById(R.id.et_biodra);
                 EditText e5 = (EditText)AktualizacjaWymiarowActivity.this.findViewById(R.id.et_uda);
-             //   String napis = waga.getText().toString();
-                Double waga=Double.parseDouble(e1.getText().toString());
-                Double klatka=Double.parseDouble(e2.getText().toString());
-                Double talia=Double.parseDouble(e3.getText().toString());
-                Double biodra=Double.parseDouble(e4.getText().toString());
-                Double uda=Double.parseDouble(e5.getText().toString());
+                if(e1.getText().toString().length()==0)
+                { e1.setText("0"); }
+                if(e2.getText().toString().length()==0)
+                { e2.setText("0"); }
+                if(e3.getText().toString().length()==0)
+                { e3.setText("0"); }
+                if(e4.getText().toString().length()==0)
+                { e4.setText("0"); }
+                if(e5.getText().toString().length()==0)
+                { e5.setText("0"); }
+                try
+                {
+
+                double waga=Double.parseDouble(e1.getText().toString());
+                double klatka=Double.parseDouble(e2.getText().toString());
+                double talia=Double.parseDouble(e3.getText().toString());
+                double biodra=Double.parseDouble(e4.getText().toString());
+                double uda=Double.parseDouble(e5.getText().toString());
                 //DO ANI !!!
                 // zmienic w razie dodania editText z wzrostem-nie chcę mi sie znowu bawić w usuwanie pliku z baza
                 //wpisac wartosc tekstowa z editTexta, wktorym podaje się wzrost
+                    if(waga==0 && klatka==0 && talia==0 && biodra==0 && uda==0)
+                    {
+                        throw  new Exception("puste wartosci wymiarow");
+                    }
                 double wzrost=0;
-                zb.dodajWymiar( wzrost, waga,klatka, talia,
-                        biodra , uda);
-                Toast.makeText(getApplicationContext(), "Zapisano wymiary", Toast.LENGTH_LONG).show();
+                    zb.dodajWymiar(wzrost, waga, klatka, talia, biodra, uda);
+                    Toast.makeText(getApplicationContext(), "Zapisano wymiary", Toast.LENGTH_LONG).show();
+                }
+                catch(Exception e)
+                {
+                    Toast.makeText(getApplicationContext(), "Blad podczas zapisu. Co najmniej jedna wartosc musi byc wieksza od 0", Toast.LENGTH_LONG).show();
+                }
+
+
                // Toast.makeText(getApplicationContext(),napis,Toast.LENGTH_LONG).show();
             }
         });
