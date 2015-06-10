@@ -70,7 +70,7 @@ public class rodzaj_Treningu extends Activity {
                                       String kat=((Spinner)findViewById(R.id.rodzajTrening)).getSelectedItem().toString();
                                       zb.dodajTrening(dataT, czasT, kat,
                                               0, "", "", "");
-                                      Toast.makeText(getApplicationContext(), "zapisano nowy rekord do bazy", Toast.LENGTH_SHORT).show();
+                                      Toast.makeText(getApplicationContext(), "zapisano nowy rekord do bazy", Toast.LENGTH_LONG).show();
                                   }
                               }
         );
