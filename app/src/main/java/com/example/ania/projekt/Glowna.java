@@ -28,7 +28,7 @@ public class Glowna extends Fragment {
         TextView kategoria = (TextView) w.findViewById(R.id.tv31);
         TextView styl = (TextView) w.findViewById(R.id.tv41);
         TextView dystans = (TextView) w.findViewById(R.id.tv51);
-        TextView notatka = (TextView) w.findViewById(R.id.tv70);
+        TextView notatka = (TextView) w.findViewById(R.id.tv61);
 
         zb=new ZarzadcaBazy(getActivity());
         // String[] kolumny = {"data","czasTreningu","rodzajTreningu","dystans", "kategoria","styl","notatka"};
