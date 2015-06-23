@@ -64,9 +64,17 @@ public class Bieg extends Activity {
                 notatka=not.getText().toString();
                 styl="";
                 String kategoria=kat.getText().toString();
-                double dystans=Double.parseDouble(dys.getText().toString());
-                zb.dodajTrening(dataT, czasT, aktywnoscT,
-                dystans, kategoria, notatka, styl);
+                try {
+                    double dystans = Double.parseDouble(dys.getText().toString());
+                    zb.dodajTrening(dataT, czasT, aktywnoscT,
+                            dystans, kategoria, notatka, styl);
+                }
+                catch(Exception e)
+                {
+                    double dystans = 0;
+                    zb.dodajTrening(dataT, czasT, aktywnoscT,
+                            dystans, kategoria, notatka, styl);
+                }
                 Intent i = new Intent(getApplicationContext(), rodzaj_Treningu.class);
                 startActivity(i);
             }
