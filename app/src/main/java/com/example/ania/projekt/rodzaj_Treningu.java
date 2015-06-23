@@ -10,7 +10,13 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 /**
+ * Klasa zawierajaca metody i funkcje sterujace zachowaniem i walidacja danych widoku dodawanie_treningu
+ * Pola klasy:
+ * @p zb zawiera odwolania do metod obsugujacych baze danych
+ * @p i koordynuje przelaczanie pomiedzy poszczegolnymi widokami
+ * @p aktywnosc zawiera rodzaj aktywnosci sportowej
  * Created by Kapibara on 2015-06-02.
+ * @autor Joanna Wójcik
  */
 public class rodzaj_Treningu extends Activity {
     ZarzadcaBazy zb;
@@ -18,6 +24,10 @@ public class rodzaj_Treningu extends Activity {
     String aktywnosc;
    // walidacjaDanych walidacja;
     @Override
+/**
+ * Metoda dodawanie_trenngu wywolujaca sie po uruchomieniu biezacej instancji. Przelacza na widok
+ * dodawanie.xml orazsteruje jego zachowaniem.
+ */
     protected void onCreate(Bundle savedInstanceState) {
 
 

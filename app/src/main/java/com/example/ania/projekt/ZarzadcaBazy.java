@@ -10,13 +10,22 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 /**
+ * Zawiera logikę sterujacą tworzeniem oraz modyfikowaniem bazy danych
  * Created by Kapibara on 2015-06-09.
+ * @author Joanna Wójcik
  */
 public class ZarzadcaBazy extends SQLiteOpenHelper {
     public ZarzadcaBazy(Context context) {
         super(context, "baza.db", null, 1);
     }
     @Override
+    /**
+     * Tworzy tabele bazie danych @p db:
+     * tabela wymiary zawierajaca takie pola jak id, dataZapisu, wzrost, waga, obKlatki, obBioder,
+     * obUda;
+     * tabela trening zawierajaca takie pola jak id, czasTreningu, rodzajTreningu, dystans,
+     * kategoria, notatka, styl data
+     */
     public void onCreate(SQLiteDatabase db){
         db.execSQL("create table wymiary(" + "id integer primary key autoincrement, " + "dataZapisu datetime not null, " +
                 "wzrost double, " + "waga double, " + "obKlatki double, " + "obTalii double, " + "obBioder double, " + "obUda double);" + "");
@@ -26,6 +35,12 @@ public class ZarzadcaBazy extends SQLiteOpenHelper {
     }
 
     @Override
+    /**
+     * Aktualizuje bazę danych do nowej wersji
+     * @param db aktualizowana baza
+     * @param oldVersion numer starej wersji bazy
+     * @param newVersion numer nowej wersji bazy
+     */
     public void onUpgrade(SQLiteDatabase db, int oldVersin, int newVersion )
     {
 
@@ -35,6 +50,17 @@ public class ZarzadcaBazy extends SQLiteOpenHelper {
         onCreate(db);
     };
     //metoda zapisuje wymiar uzytkownika wraz z aktualna data zapisu
+
+    /**
+     * Dodaje nowy rekord w bazie danych do tabeli wymiary, w której zapisane są wymiary użytkownika
+     * @param wzrost wzrost danej osoby
+     * @param waga waga danej osoby
+     * @param obKlatki obwód klatki piersiowej
+     * @param obTalii obwód talii
+     * @param obBioder obwód bioder
+     * @param obUda obwód uda
+     * @throws Exception
+     */
     public void dodajWymiar(double wzrost, double waga, double obKlatki,double obTalii,
                             double obBioder, double obUda) throws Exception {
         try {
@@ -61,6 +87,17 @@ public class ZarzadcaBazy extends SQLiteOpenHelper {
         }
     }
     // dodawanie treningu
+
+    /**
+     * Dodaje nowy rekord do tabeli trening w bazie danych z nastepującymi polami:
+     * @param data data treningu
+     * @param czas czas treningu
+     * @param rodzajTreningu rodzaj treningu
+     * @param Dystans przebyty dystans
+     * @param Kategoria kategoria treningu
+     * @param notatka dodatkowy komentarz dot treningu
+     * @param Styl styl plywania
+     */
     public void dodajTrening(String data, String czas, String rodzajTreningu,
                              double Dystans, String Kategoria, String notatka, String Styl){
         try {
@@ -84,6 +121,10 @@ public class ZarzadcaBazy extends SQLiteOpenHelper {
         }
 
     }
+
+    /**
+     * usuwa wszystkie rekordy znajdujace sie w tabeli trening w bazie danych
+     */
     public void usunTrening(){
         try {
             SQLiteDatabase db = getWritableDatabase();

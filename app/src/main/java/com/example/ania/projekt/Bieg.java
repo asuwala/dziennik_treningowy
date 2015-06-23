@@ -8,7 +8,15 @@ import android.widget.Button;
 import android.widget.EditText;
 
 /**
+ * Ta klasa zawiera funkcje, które obs³uguj¹ aktywnosc widoku bieg.xml
+ * Pola klasy:
+ *   @p zb zawiera odwolania do metod obsugujacych baze danych
+ * @p czasT czas treningu
+ * @p dataT data treningu
+ * @p aktywnoscT rodzaj aktywnosci
+ * @p notatatka dodatkowe komentarze u¿ytownika
  * Created by Kapibara on 2015-06-02.
+ * @autor Joanna Wójcik
  */
 public class Bieg extends Activity {
     ZarzadcaBazy zb;
@@ -17,6 +25,11 @@ public class Bieg extends Activity {
     String aktywnoscT;
     String notatka;
     String styl;
+
+    /**
+     * Metoda wywolujaca sie po uruchomieniu biezacej instancji. Przelacza na widok
+     * bieg.xml oraz steruje jego zachowaniem
+     */
     protected void onCreate(Bundle savedInstanceState) {
         zb=new ZarzadcaBazy(this);
         super.onCreate(savedInstanceState);

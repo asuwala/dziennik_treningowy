@@ -9,13 +9,24 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 
 /**
+ *  Ta klasa zawiera funkcje, które obs³uguj¹ aktywnosc widoku plywanie.xml
+ *  Pola klasy:
+ *   @p zb zawiera odwolania do metod obsugujacych baze danych
+ * @p czasT czas treningu
+ * @p dataT data treningu
+ * @p styl styl plywania
  * Created by Kapibara on 2015-06-02.
+ * @autor Joanna Wójcik
  */
 public class Plywanie extends Activity {
     ZarzadcaBazy zb;
     String czasT;
     String styl;
     String dataT;
+    /**
+     * Metoda wywolujaca sie po utworzeniu uruchomieniu instancji. Przelacza na widok
+     * plywanie.xml oraz steruje jego zachowaniem
+     */
     protected void onCreate(Bundle savedInstanceState) {
         zb=new ZarzadcaBazy(this);
         super.onCreate(savedInstanceState);
