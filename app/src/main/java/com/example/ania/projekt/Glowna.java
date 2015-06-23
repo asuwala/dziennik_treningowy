@@ -22,6 +22,9 @@ public class Glowna extends Fragment {
         View w = inflater.inflate(R.layout.fragment_glowna, container,false);
         Button btn1 = (Button) w
                 .findViewById(R.id.buttonDodajTrening);
+
+        //TextView ostatni = (TextView) w.findViewById(R.id.tVOstatniTrening);
+
         TextView data = (TextView) w.findViewById(R.id.tv01);
         TextView czas = (TextView) w.findViewById(R.id.tv11);
         TextView rodzaj = (TextView) w.findViewById(R.id.tv21);
@@ -48,6 +51,11 @@ public class Glowna extends Fragment {
                 String sty = k.getString(5);
                 String not = k.getString(6);
 
+                /*ostatni.setText(ostatni.getText()+"\n"+"Data: "+dt+"\n"+"Czas treningu: "
+                        +cz+"\n"+"Rodzaj treningu: "+rodz+"\n"+"Dystans: "+dys+" km"+"\n"+"Kategoria: "
+                        +kateg+sty+"\n"+"Notatka: "+not);
+                        */
+
                 data.setText(dt);
                 czas.setText(cz+" h");
                 rodzaj.setText(rodz);
@@ -55,6 +63,7 @@ public class Glowna extends Fragment {
                 styl.setText(sty);
                 dystans.setText(dys+" km");
                 notatka.setText(not);
+
 
             }
         }
