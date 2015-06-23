@@ -2,6 +2,7 @@ package com.example.ania.projekt;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -94,5 +95,31 @@ public class ZarzadcaBazy extends SQLiteOpenHelper {
         {
             System.out.print(ex.getMessage());
         }
+
+    }
+
+    // pobranie danych z bazy "wymiary"
+    public Cursor dajWymiary(){
+        // "klolumny" to klumny jakie chcemy odczytać z bazy danych w podanej kolejności
+        String[] kolumny ={"dataZapisu","waga", "obKlatki", "obTalii", "obBioder", "obUda"};
+        // pobranie uchwytu do bazy
+        SQLiteDatabase db = getReadableDatabase();
+        // pobieranie danych metoda query
+        Cursor kursor = db.query("wymiary",kolumny,null,null,null,null,null);
+        return  kursor;
+    }
+
+
+    // pobranie danych z bazy "trening"
+    public Cursor dajTreningi() {
+        // "klolumny" to klumny jakie chcemy odczytać z bazy danych w podanej kolejności
+        String[] kolumny = {"data","czasTreningu","rodzajTreningu","dystans", "kategoria","styl","notatka"};
+        // pobranie uchwytu do bazy
+        SQLiteDatabase db = getReadableDatabase();
+        // pobieranie danych metoda query
+        Cursor kursor = db.query("trening",kolumny,null,null,null,null,"data");
+        return kursor;
+
+
     }
 }

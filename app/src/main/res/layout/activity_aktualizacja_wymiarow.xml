@@ -131,5 +131,14 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Anuluj"
+        android:id="@+id/btnAnulujAktualizacja"
+        android:layout_alignTop="@+id/btn_Zapisz_wymiary"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp" />
+
 
 </RelativeLayout>

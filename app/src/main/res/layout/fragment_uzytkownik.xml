@@ -77,7 +77,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Medium Text"
             android:id="@+id/tV_Waga_wartosc"
             android:layout_alignTop="@+id/tV_Waga"
             android:background="#fffffffb"
@@ -87,7 +86,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Medium Text"
             android:id="@+id/tV_Klatka_wartosc"
             android:layout_alignBottom="@+id/tV_Ob_klatka"
             android:layout_toRightOf="@+id/tV_Ob_klatka"
@@ -98,7 +96,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Medium Text"
             android:id="@+id/tV_Talia_wartosc"
             android:layout_alignTop="@+id/tV_Ob_talia"
             android:layout_alignRight="@+id/tV_Klatka_wartosc"
@@ -109,7 +106,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Medium Text"
             android:id="@+id/tV_Biodra_wartosc"
             android:layout_alignTop="@+id/tV_Ob_bioder"
             android:layout_alignLeft="@+id/tV_Talia_wartosc"
@@ -120,7 +116,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Medium Text"
             android:id="@+id/tV_Uda_wartosc"
             android:layout_alignTop="@+id/tV_Ob_uda"
             android:layout_alignRight="@+id/tV_Biodra_wartosc"
@@ -133,10 +128,8 @@
             android:text="@string/historia"
             android:id="@+id/btn_Historia_wymiary"
             android:layout_alignParentBottom="true"
-            android:layout_toLeftOf="@+id/tV_Uda_wartosc"
-            android:layout_toStartOf="@+id/tV_Uda_wartosc"
             android:layout_marginBottom="20dp"
-            android:layout_marginLeft="20dp" />
+            android:layout_marginLeft="20dp"/>
 
         <Button
             android:layout_width="wrap_content"
@@ -209,4 +202,23 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="WHR:"
+        android:id="@+id/textView11"
+        android:layout_below="@+id/tV_Ob_uda"
+        android:layout_toLeftOf="@+id/tV_Uda_wartosc"
+        android:layout_marginTop="25dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/txtWHR"
+        android:layout_alignTop="@+id/textView11"
+        android:layout_toRightOf="@+id/textView11"
+        android:background="#fffffffb"/>
 </RelativeLayout>
