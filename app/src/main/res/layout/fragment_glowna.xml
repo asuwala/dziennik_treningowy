@@ -18,20 +18,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:id="@+id/textViewOstatniTrening"
-            android:layout_below="@+id/textView"
-            android:layout_marginTop="28dp"
-            android:layout_above="@+id/buttonDodajTrening"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
-
-        <Button
+    <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/dodaj_trening"
@@ -42,6 +29,157 @@
             android:layout_marginRight="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp" />
+
+    <GridLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:rowCount="8"
+        android:columnCount="3"
+        android:id="@+id/GW"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView"
+        android:layout_above="@+id/buttonDodajTrening">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/tv00"
+            android:text="Data:"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_margin="5dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/tv01"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_margin="5dp">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/tv10"
+            android:text="Czas:"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_margin="5dp">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/tv11"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:layout_margin="5dp">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/tv20"
+            android:text="Rodzaj:"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_margin="5dp">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/tv21"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:layout_margin="5dp">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/tv30"
+            android:text="Kategoria:"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:layout_margin="5dp">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/tv31"
+            android:layout_row="3"
+            android:layout_column="2"
+            android:layout_margin="5dp">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/tv40"
+            android:text="Styl:"
+            android:layout_row="4"
+            android:layout_column="0"
+            android:layout_margin="5dp">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/tv41"
+            android:layout_row="4"
+            android:layout_column="2"
+            android:layout_margin="5dp">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/tv50"
+            android:text="Dystans:"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:layout_margin="5dp">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/tv51"
+            android:layout_row="5"
+            android:layout_column="2"
+            android:layout_margin="5dp">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/tv60"
+            android:text="Notatka:"
+            android:layout_row="6"
+            android:layout_column="0"
+            android:layout_margin="5dp">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/tv70"
+            android:layout_row="7"
+            android:layout_column="0"
+            android:layout_margin="5dp">
+        </TextView>
+
+
+
+        </GridLayout>
 
 
 </RelativeLayout>

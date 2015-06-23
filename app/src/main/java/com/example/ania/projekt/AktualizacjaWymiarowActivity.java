@@ -2,6 +2,8 @@ package com.example.ania.projekt;
 
 
 import android.app.Activity;
+import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,6 +14,8 @@ import android.widget.Toast;
  * Created by Ania on 2015-06-02.
  */
 public class AktualizacjaWymiarowActivity extends Activity {
+
+    // stworzenie obiektu zarządcy baza danych
     ZarzadcaBazy zb;
 
 
@@ -21,6 +25,10 @@ public class AktualizacjaWymiarowActivity extends Activity {
         setContentView(R.layout.activity_aktualizacja_wymiarow);
         zb=new ZarzadcaBazy(this);
         Button cliButton = (Button) findViewById(R.id.btn_Zapisz_wymiary);
+        Button cliButton2 = (Button) findViewById(R.id.btnAnulujAktualizacja);
+
+
+
 
 
 
@@ -51,9 +59,7 @@ public class AktualizacjaWymiarowActivity extends Activity {
                 double talia=Double.parseDouble(e3.getText().toString());
                 double biodra=Double.parseDouble(e4.getText().toString());
                 double uda=Double.parseDouble(e5.getText().toString());
-                //DO ANI !!!
-                // zmienic w razie dodania editText z wzrostem-nie chcę mi sie znowu bawić w usuwanie pliku z baza
-                //wpisac wartosc tekstowa z editTexta, wktorym podaje się wzrost
+
                     if(waga==0 && klatka==0 && talia==0 && biodra==0 && uda==0)
                     {
                         throw  new Exception("puste wartosci wymiarow");
@@ -68,40 +74,22 @@ public class AktualizacjaWymiarowActivity extends Activity {
                 }
 
 
-               // Toast.makeText(getApplicationContext(),napis,Toast.LENGTH_LONG).show();
+
             }
         });
 
-/*
-        cliButton.setOnClickListener( new View.OnClickListener() {
+        cliButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog alertDialog = new AlertDialog.Builder(v.getRootView().getContext()).create();
-                alertDialog.setTitle("AAA");
-                alertDialog.setMessage("Zapianie wymiarów spowoduje zaktualizowanie wymiarów w oknie użtkownika.");
-                alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "Anuluj", new DialogInterface.OnClickListener() {
 
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
 
-                    }
-                });
-                alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "OK", new DialogInterface.OnClickListener() {
+                Intent i = new Intent(getApplicationContext(), MainActivity.class);
 
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
+                startActivity(i);
 
-                        EditText waga = (EditText)AktualizacjaWymiarowActivity.this.findViewById(R.id.et_waga);
-                        EditText obklatka = (EditText)AktualizacjaWymiarowActivity.this.findViewById(R.id.et_klatka);
-                        EditText obtalia = (EditText)AktualizacjaWymiarowActivity.this.findViewById(R.id.et_talia);
-                        EditText obbiodra = (EditText)AktualizacjaWymiarowActivity.this.findViewById(R.id.et_biodra);
-                        EditText obuda = (EditText)AktualizacjaWymiarowActivity.this.findViewById(R.id.et_uda);
-                    }
-                });
+
             }
         });
-
-        */
 
 
     }
