@@ -138,6 +138,21 @@ public class ZarzadcaBazy extends SQLiteOpenHelper {
         }
 
     }
+    /**
+     * usuwa wszystkie rekordy znajdujace sie w tabeli wymiary w bazie danych
+     */
+    public void usunWymiary(){
+        try {
+            SQLiteDatabase db = getWritableDatabase();
+            db.delete("wymiary", null, null);
+            db.close();
+        }
+        catch (SQLException ex)
+        {
+            System.out.print(ex.getMessage());
+        }
+
+    }
 
     // pobranie danych z bazy "wymiary"
     public Cursor dajWymiary(){

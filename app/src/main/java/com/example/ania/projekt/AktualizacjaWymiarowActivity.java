@@ -11,29 +11,37 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 /**
+ * Class AktualizacjaWymiarowActivity odpowiedzialna za aktualizacje wymiarów użytkownika.
+ * Ustawia widok activity_aktualizacja_wymiarow.xml jako jedna z części głównego interfejsu
+ * użytkownika oraz  obsługuje jego aktywność.
  * Created by Ania on 2015-06-02.
+ * @author Anna Suwała
  */
 public class AktualizacjaWymiarowActivity extends Activity {
 
-    // stworzenie obiektu zarządcy baza danych
+    // stworzenie obiektu zarządcy bazy danych
     ZarzadcaBazy zb;
 
-
+    /** Metoda wywolujaca sie po uruchomieniu biezacej instancji. Uruchamia widok
+     *  activity_aktualizacja_wymiarow.xml slużacy do aktualizacji wymiarów ciała uzytkownika
+     *  oraz zapisania tych danych do bazy danych. */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aktualizacja_wymiarow);
         zb=new ZarzadcaBazy(this);
+        /** Przycisk btn_Zapisz_wymiary po kliknięciu, którego wprowadzone
+         *  wymiary zostają zapisane do bazy*/
         Button cliButton = (Button) findViewById(R.id.btn_Zapisz_wymiary);
+        /** Przycisk btnAnulujAktualizacja po kliknięciu, którego nastepuje powrót
+         * do głownej aktywności*/
         Button cliButton2 = (Button) findViewById(R.id.btnAnulujAktualizacja);
-
-
-
-
-
 
         cliButton.setOnClickListener(new View.OnClickListener() {
 
+            /** Metoda odpowiedzialna za pobranie wartości takich jak: waga, ob. klatki,
+             * ob. talii, ob. bioder i ob. uda z odpwiednich pól EditTekst, . Zapisuje ona
+             * również dane wartości do bazy danych.*/
             @Override
             public void onClick(View v) {
                 EditText e1 = (EditText)AktualizacjaWymiarowActivity.this.findViewById(R.id.et_waga);
@@ -53,6 +61,7 @@ public class AktualizacjaWymiarowActivity extends Activity {
                 { e5.setText("0"); }
                 try
                 {
+
 
                 double waga=Double.parseDouble(e1.getText().toString());
                 double klatka=Double.parseDouble(e2.getText().toString());
@@ -79,6 +88,7 @@ public class AktualizacjaWymiarowActivity extends Activity {
         });
 
         cliButton2.setOnClickListener(new View.OnClickListener() {
+            /** Metoda odpowiedzialna za powrót do głónwj aktywności */
             @Override
             public void onClick(View v) {
 

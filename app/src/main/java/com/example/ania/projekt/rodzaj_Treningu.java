@@ -16,7 +16,7 @@ import android.widget.Toast;
  * @p i koordynuje przelaczanie pomiedzy poszczegolnymi widokami
  * @p aktywnosc zawiera rodzaj aktywnosci sportowej
  * Created by Kapibara on 2015-06-02.
- * @autor Joanna Wójcik
+ * @autor Joanna Wï¿½jcik
  */
 public class rodzaj_Treningu extends Activity {
     ZarzadcaBazy zb;
@@ -26,7 +26,7 @@ public class rodzaj_Treningu extends Activity {
     @Override
 /**
  * Metoda dodawanie_trenngu wywolujaca sie po uruchomieniu biezacej instancji. Przelacza na widok
- * dodawanie.xml orazsteruje jego zachowaniem.
+ * dodawanie.xml oraz steruje jego zachowaniem.
  */
     protected void onCreate(Bundle savedInstanceState) {
 

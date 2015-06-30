@@ -8,15 +8,15 @@ import android.widget.Button;
 import android.widget.EditText;
 
 /**
- * Ta klasa zawiera funkcje, które obs³uguj¹ aktywnosc widoku fitnes.xml
+ * Ta klasa zawiera funkcje, ktï¿½re obsï¿½ugujï¿½ aktywnosc widoku fitnes.xml
  *  Pola klasy:
- *   @p zb zawiera odwolania do metod obsugujacych baze danych.
+ * @p zb zawiera odwolania do metod obsugujacych baze danych.
  * @p czasT czas treningu
  * @p dataT data treningu
  * @p aktywnoscT rodzaj aktywnosci
- * @p notatka dodatkowe komentarze u¿ytownika
+ * @p notatka dodatkowe komentarze uï¿½ytownika
  * Created by Kapibara on 2015-06-02.
- * @autor Joana Wójcik
+ * @autor Joana Wï¿½jcik
  */
 public class Fitness extends Activity {
     ZarzadcaBazy zb;

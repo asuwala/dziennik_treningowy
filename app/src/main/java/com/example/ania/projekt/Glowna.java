@@ -12,18 +12,21 @@ import android.widget.Button;
 import android.widget.TextView;
 
 /**
+ * Class Głowna ustawia widok fragment_glowna.xml jako jedna z części głównego
+ * interfejsu użytkownika oraz oraz obsługuje jego aktywność.
  * Created by Ania on 2015-05-24.
+ * @autor Anna Suwała
  */
 public class Glowna extends Fragment {
 
     ZarzadcaBazy zb;
 
+    /** Metoda wywolujaca sie po uruchomieniu biezacej instancji. Uruchamia widok
+     * fragment_glowna.xml oraz steruje jego zachowaniem*/
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View w = inflater.inflate(R.layout.fragment_glowna, container,false);
         Button btn1 = (Button) w
                 .findViewById(R.id.buttonDodajTrening);
-
-        //TextView ostatni = (TextView) w.findViewById(R.id.tVOstatniTrening);
 
         TextView data = (TextView) w.findViewById(R.id.tv01);
         TextView czas = (TextView) w.findViewById(R.id.tv11);
@@ -34,10 +37,17 @@ public class Glowna extends Fragment {
         TextView notatka = (TextView) w.findViewById(R.id.tv61);
 
         zb=new ZarzadcaBazy(getActivity());
-        // String[] kolumny = {"data","czasTreningu","rodzajTreningu","dystans", "kategoria","styl","notatka"};
+
+        /** Pobranie danych z bazy w postaci obiektu klasy Cursor.*/
         Cursor k = zb.dajTreningi();
+        /** W ykorzystanie metody moveToNext(), w pętli while pozwala na przesuwanie się po
+         * wyniku zapytania po linii w dół tak długo jak długo są jeszcze jakieś dane do
+         * przeczytania.
+         */
         while(k.moveToNext()) {
+            // interesuje nas tylko ostatni element - k.isLast()
             if (k.isLast()) {
+                // przypisanie zawartości kolumn z kolejnych wierszy do zmiennych
                 String dt = k.getString(0);
                 String[] sp = dt.split(" ");
                 String[] sp2 = sp[0].split("-");
@@ -51,11 +61,7 @@ public class Glowna extends Fragment {
                 String sty = k.getString(5);
                 String not = k.getString(6);
 
-                /*ostatni.setText(ostatni.getText()+"\n"+"Data: "+dt+"\n"+"Czas treningu: "
-                        +cz+"\n"+"Rodzaj treningu: "+rodz+"\n"+"Dystans: "+dys+" km"+"\n"+"Kategoria: "
-                        +kateg+sty+"\n"+"Notatka: "+not);
-                        */
-
+                // wyświetlenie pobranych danych w przeznaczonych do tego polach
                 data.setText(dt);
                 czas.setText(cz+" h");
                 rodzaj.setText(rodz);

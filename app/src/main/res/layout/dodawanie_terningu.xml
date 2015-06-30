@@ -105,15 +105,16 @@
             android:textColorHighlight="#fd000000"
             android:textIsSelectable="false"
             android:singleLine="false"
-            android:maxLines="2"
-            android:lines="2"
+            android:maxLines="1"
+            android:lines="1"
             android:textStyle="bold"
             android:textAlignment="inherit"
-            android:layout_alignBottom="@+id/Data"
-            android:layout_toLeftOf="@+id/rodzajTrening"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_alignTop="@+id/Data" />
+            android:layout_toStartOf="@+id/rodzajTrening"
+            android:layout_below="@+id/rodzajTrening"
+            android:layout_alignBottom="@+id/Data"
+            android:layout_toLeftOf="@+id/rodzajTrening" />
 
         <Button
             android:layout_width="wrap_content"

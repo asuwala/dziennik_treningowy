@@ -11,12 +11,16 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-
+/** Główna klasa aplikacji. Ustawia widok activity_main.xml jako jedna z części głównego
+ * interfejsu użytkownika oraz obsługuje jego aktywność.
+ * @autor Anna Suwała
+ */
 public class MainActivity extends FragmentActivity {
 
     ViewPager viewPager = null;
 
-
+    /** Metoda wywolujaca sie po uruchomieniu biezacej instancji. Uruchamia widok
+     * activity_main.xml oraz steruje jego zachowaniem. */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,12 +29,9 @@ public class MainActivity extends FragmentActivity {
         viewPager = (ViewPager) findViewById(R.id.pager);
         FragmentManager fragmentManager = getSupportFragmentManager();
         viewPager.setAdapter( new MyAdapter(fragmentManager));
-
-
-
     }
 
-
+    /*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -52,8 +53,10 @@ public class MainActivity extends FragmentActivity {
 
         return super.onOptionsItemSelected(item);
     }
+    */
 }
 
+/** Klasa zarzadzająca fragmentami należącymi do menu uzytkownika. */
 class MyAdapter extends FragmentPagerAdapter {
 
 
@@ -61,6 +64,8 @@ class MyAdapter extends FragmentPagerAdapter {
         super(fm);
     }
 
+    /** Metoda wywołująca odpowiednią klasę, reprezentujacą dany fragment/stronę, przypisaną do
+     * danej pozycji p. */
     @Override
     public Fragment getItem(int i) {
         Fragment fragment=null;
@@ -78,12 +83,13 @@ class MyAdapter extends FragmentPagerAdapter {
         }
         return fragment;
     }
-
+    /** Metoda zwracajaca całkowita liczbę stron, należących do głównego menu. */
     @Override
     public int getCount() {
         return 3;
     }
 
+    /** Metoda ustawiajaca tytuł strony w zalezności od aktualnego fragmenu/strony menu. */
     @Override
     public CharSequence getPageTitle(int position){
 

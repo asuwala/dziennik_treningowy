@@ -43,7 +43,9 @@
             android:layout_alignBottom="@+id/textView4"
             android:layout_alignRight="@+id/dodTrening"
             android:text="0"
-            android:autoText="false" />
+            android:autoText="false"
+            android:layout_toRightOf="@+id/textView4"
+            android:layout_toEndOf="@+id/textView4" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -61,11 +63,12 @@
             android:layout_height="wrap_content"
             android:id="@+id/kategoriaBieg"
             android:layout_below="@+id/dystansBieg"
-            android:layout_alignLeft="@+id/dystansBieg"
             android:layout_marginTop="51dp"
             android:layout_alignRight="@+id/dystansBieg"
             android:accessibilityLiveRegion="assertive"
-            android:autoText="true" />
+            android:autoText="true"
+            android:layout_toRightOf="@+id/ZapiszBieg"
+            android:layout_toEndOf="@+id/ZapiszBieg" />
 
         <TextView
             android:layout_width="wrap_content"
